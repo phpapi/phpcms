@@ -33,6 +33,8 @@ class test_model extends model {
         $systeminfo['url'] = $data['thumb'];
         $systeminfo['description'] = $data['title'];
         $systeminfo['typeid'] = 1;
+        $systeminfo['inputtime'] = time();
+        $systeminfo['updatetime'] = time();
         //主表
 //        $tablename = $this->table_name = $this->db_tablepre.$this->model_tablename;
         $id = $this->insert($systeminfo,true);
@@ -109,6 +111,9 @@ class test_model extends model {
         $systeminfo['url'] = $data['thumb'];
         $systeminfo['description'] = $data['title'];
         $systeminfo['typeid'] = 1;
+
+        $systeminfo['inputtime'] = time();
+        $systeminfo['updatetime'] = time();
 
         //主表
 //        $tablename = $this->table_name = $this->db_tablepre.$this->model_tablename;

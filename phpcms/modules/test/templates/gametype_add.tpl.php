@@ -41,6 +41,17 @@ include $this->admin_tpl('header', 'admin');
                     <td class="y-bg">
                         <input type="text" class="input-text" name="info[url]" id="url" size="30" /></td>
                 </tr>
+                <tr>
+                    <th width="120"><?php echo L("text_color")?>：</th>
+                    <td class="y-bg">
+                        <input type="checkbox"<?php if($data['color']==1){?> checked<?php }?> id="other" value="1" name="info[color]">
+                        </td>
+                </tr>
+                <tr>
+                    <th width="120"><?php echo L("sort")?>：</th>
+                    <td class="y-bg">
+                        <input type="text" class="input-text" name="info[sort]" id="url" size="30" /></td>
+                </tr>
             </table>
 
             <div class="bk15"></div>

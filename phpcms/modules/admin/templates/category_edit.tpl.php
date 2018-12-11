@@ -94,7 +94,12 @@ include $this->admin_tpl('header');?>
 	  <input type='radio' name='info[ismenu]' value='1' <?php if($ismenu) echo 'checked';?>> <?php echo L('yes');?>&nbsp;&nbsp;&nbsp;&nbsp;
 	  <input type='radio' name='info[ismenu]' value='0' <?php if(!$ismenu) echo 'checked';?>> <?php echo L('no');?></td>
     </tr>
-
+    <tr>
+        <th><?php echo L('isside');?>：</th>
+        <td>
+            <input type='radio' name='info[isside]' value='1' <?php if($isside) echo 'checked';?>> <?php echo L('yes');?>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type='radio' name='info[isside]' value='0' <?php if(!$isside) echo 'checked';?>> <?php echo L('no');?></td>
+    </tr>
 </table>
 
 </div>

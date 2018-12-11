@@ -15,8 +15,18 @@ class mytest {
         var_dump($result);
     }
     public function mylist() {
+        $this->category_db = pc_base::load_model('category_model');
+        $category = $this->category_db->select('`type`=0 AND `parentid`=0');
         $this->db = pc_base::load_model('test_model');
         $data = $this->db->select();
+        $this->db = pc_base::load_model('gametype_model');
+        $gametype = $this->db->select();
+        $type = [1=>'热门单机',
+            2=>'手游大作',
+            3=>'大型网游',
+            4=>'推荐页游',
+            5=>'即将上市',
+            6=>'游戏活动'];
         include template('test', 'index');
 
     }

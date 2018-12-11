@@ -31,23 +31,18 @@
     <div class="nav">
         <div class="center">
             <ul>
-                <li><a href="https://www.3dmgame.com/news/">新闻<span class="hide"></span></a></li>
-                <li><a href="https://www.3dmgame.com/original.html">专栏<span class="hide"></span></a></li>
-                <li><a href="https://www.3dmgame.com/bagua/">娱乐<span class="hide"></span></a></li>
-                <li><a href="https://3c.3dmgame.com/">硬件<span class="hide"></span></a></li>
-                <li><a href="https://3dmgame.taobao.com/">商城<span class="hide"></span></a></li>
-                <li><a href="https://www.3dmgame.com/release/">发售表<span class="hide"></span></a></li>
-                <li><a href="https://dl.3dmgame.com/">下载<span class="hide"></span></a></li>
-                <li><a href="https://www.3dmgame.com/swzt/">专题<span class="hide"></span></a></li>
-                <li><a href="http://bbs.3dmgame.com/">论坛<span class="hide"></span></a></li>
-                <li><a href="https://mod.3dmgame.com/" target="_blank">MOD站<span class="hide"></span></a></li>
+                <?php $n=1;if(is_array($category)) foreach($category AS $r) { ?>
+                <?php if($r[isside]==1) { ?>
+                <li><a href="<?php echo $r['url'];?>"><?php echo $r['catname'];?><span class="hide"></span></a></li>
+                <?php } ?>
+                <?php $n++;}unset($n); ?>
             </ul>
             <ol>
-                <li><a href="https://www.3dmgame.com" class="as">首页</a></li>
-                <li><a href="https://www.3dmgame.com/games/">单机</a></li>
-                <li><a href="https://shouyou.3dmgame.com/">手游</a></li>
-                <li><a href="https://ol.3dmgame.com/">网游</a></li>
-                <li><a href="https://yeyou.3dmgame.com/">自运营</a></li>
+                <?php $n=1;if(is_array($category)) foreach($category AS $k=>$r) { ?>
+                <?php if($r[isside]==0) { ?>
+                <li><a href="<?php echo $r['url'];?>" <?php if($k==0) { ?> class="as" <?php } ?>><?php echo $r['catname'];?></a></li>
+                <?php } ?>
+                <?php $n++;}unset($n); ?>
             </ol>
         </div>
     </div>
@@ -70,102 +65,16 @@
         <i style="width:26px;height:15px;position:absolute;left:0;bottom:0;background:url(https://www.3dmgame.com/page/images/icon_ad.png);"></i>
     </div>
     <div class="Min_1">
-        <div class="lis lis1">
-            <p>热门单机</p>
-            <a href="https://www.3dmgame.com/games/gjqt3/" target="_blank"   class="red"  >古剑奇谭三<i></i></a>
-            <a href="https://www.3dmgame.com/games/darksouls3/" target="_blank"   class="red"  >黑暗之魂3<i></i></a>
-            <a href="https://www.3dmgame.com/games/monsterhunterworld/" target="_blank"   >怪物猎人：世界<i></i></a>
-            <a href="https://www.3dmgame.com/games/assassinscreedodysse/" target="_blank"   class="red"  >刺客信条：奥德赛<i></i></a>
-            <a href="https://www.3dmgame.com/games/soulcalibur6/" target="_blank"   class="red"  >灵魂能力6<i></i></a>
-            <a href="https://www.3dmgame.com/games/divinityos2/" target="_blank"   >神界：原罪2<i></i></a>
-            <a href="https://www.3dmgame.com/games/slaythespire/" target="_blank"   class="red"  >杀戮尖塔<i></i></a>
-            <a href="https://www.3dmgame.com/games/rdr2/" target="_blank"   class="red"  >荒野大镖客2<i></i></a>
-            <a href="https://www.3dmgame.com/games/witcher3/" target="_blank"   class="red"  >巫师3：狂猎<i></i></a>
-            <a href="https://www.3dmgame.com/games/spiderman/" target="_blank"   >漫威蜘蛛侠<i></i></a>
-            <a href="https://www.3dmgame.com/games/taiwu/" target="_blank"   >太吾绘卷<i></i></a>
+        <?php $n=1;if(is_array($type)) foreach($type AS $k=>$r) { ?>
+        <div class="lis lis<?php echo $k;?>">
+            <p><?php echo $r;?></p>
+            <?php $n=1;if(is_array($gametype)) foreach($gametype AS $kk=>$rr) { ?>
+            <a href="<?php echo $rr['url'];?>"  target="_blank"  <?php if($rr[color]==1) { ?> class="red" <?php } ?> ><?php echo $rr['title'];?><i></i></a>
+            <?php $n++;}unset($n); ?>
+
         </div>
-        <div class="lis lis2">
-            <p>手游大作</p>
-            <a href="https://shouyou.3dmgame.com/zt/5/" target="_blank"   >王者荣耀<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/7/" target="_blank"   >阴阳师<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/25774/" target="_blank"   >非人学园<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/3488/" target="_blank"   >楚留香<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/4713/" target="_blank"   class="red"  >第五人格<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/37463/" target="_blank"   class="red"  >贪婪洞窟2<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/29856/" target="_blank"   >绝地求生：刺激战场<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/32005/" target="_blank"   >梦幻模拟战<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/6/" target="_blank"   >龙之谷<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/25181/" target="_blank"   >荒野行动<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/255/" target="_blank"   >小米枪战<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/311/" target="_blank"   >大唐无双<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/13610/" target="_blank"   >恋与制作人<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/1001/" target="_blank"   >剑与家园<i></i></a>
-            <a href="https://shouyou.3dmgame.com/zt/568/" target="_blank"   >FGO<i></i></a>
-        </div>
-        <div class="lis lis3">
-            <p>大型网游</p>
-            <a href="https://ol.3dmgame.com/lostark/" target="_blank"   >失落的方舟<i></i></a>
-            <a href="https://ol.3dmgame.com/artifact/" target="_blank"   class="red"  >Artifact<i></i></a>
-            <a href="https://ol.3dmgame.com/wuly/" target="_blank"   >武侠乂<i></i></a>
-            <a href="https://ol.3dmgame.com/lol/" target="_blank"   class="red"  >英雄联盟<i></i></a>
-            <a href="https://ol.3dmgame.com/dnf/" target="_blank"   >地下城与勇士<i></i></a>
-            <a href="https://ol.3dmgame.com/fortnite/" target="_blank"   >堡垒之夜<i></i></a>
-            <a href="https://ol.3dmgame.com/wuzfz/" target="_blank"   >无限法则<i></i></a>
-            <a href="https://ol.3dmgame.com/bns/" target="_blank"   >剑灵<i></i></a>
-            <a href="https://ol.3dmgame.com/jianw3/" target="_blank"   >剑网3<i></i></a>
-            <a href="https://ol.3dmgame.com/test/gjqtwlb/" target="_blank"   class="red"  >古剑奇谭OL<i></i></a>
-            <a href="https://ol.3dmgame.com/wow/" target="_blank"   >魔兽世界<i></i></a>
-            <a href="https://ol.3dmgame.com/nizhan/" target="_blank"   >逆战<i></i></a>
-            <a href="https://ol.3dmgame.com/wuxia/" target="_blank"   >天涯明月刀<i></i></a>
-            <a href="https://ol.3dmgame.com/jyzj/" target="_blank"   >九阴真经<i></i></a>
-        </div>
-        <div class="lis lis4">
-            <p>推荐页游</p>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_yjxy:wsadvertisement&info=1" target="_blank"   class="red"  >暴走萌姬<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_sslj:swf" target="_blank"   >三十六计<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_fyqst:3dmadvertisement" target="_blank"   class="red"  >绯雨骑士团<i></i></a>
-            <a href="http://bbs.3dmgame.com/forum-1520-1.html" target="_blank"   >大皇帝<i></i></a>
-            <a href="http://bbs.3dmgame.com/forum-2545-1.html" target="_blank"   >荒野求生<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_xkx:3dmadvertisement" target="_blank"   class="red"  >侠客行<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_wddg:h5pc_cs_3dm" target="_blank"   >我的帝国<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_dldl:wsadvertisement" target="_blank"   >斗罗大陆<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_ygbkm:3dmadvertisement" target="_blank"   class="red"  >妖怪宝可萌<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_sanguo2:advertisement" target="_blank"   >三国之志2<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_hdx:3dmadvertisement" target="_blank"   class="red"  >寒刀行<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_xxdxc:h5pc_cs_3dm" target="_blank"   >小小地下城<i></i></a>
-            <a href="http://bbs.3dmgame.com/plugin.php?id=smx_xiangsu:3dmadvertisement" target="_blank"   >像素骑士团<i></i></a>
-        </div>
-        <div class="lis lis5">
-            <p>即将上市</p>
-            <a href="https://www.3dmgame.com/games/pal7/" target="_blank"   class="red"  >仙剑奇侠传七<i></i></a>
-            <a href="https://www.3dmgame.com/games/re2r/" target="_blank"   >生化危机2：重制版<i></i></a>
-            <a href="https://www.3dmgame.com/games/mountblade2b/" target="_blank"   class="red"  >骑马与砍杀2：领主<i></i></a>
-            <a href="https://www.3dmgame.com/games/anthem/" target="_blank"   >圣歌<i></i></a>
-            <a href="https://www.3dmgame.com/games/cyberpunk2077/" target="_blank"   >赛博朋克2077<i></i></a>
-            <a href="https://www.3dmgame.com/games/deadoralive6/" target="_blank"   class="red"  >死或生6<i></i></a>
-            <a href="https://www.3dmgame.com/games/acecombat7su/" target="_blank"   >皇牌空战7<i></i></a>
-            <a href="https://www.3dmgame.com/games/totalwarthreekingdom/" target="_blank"   class="red"  >全面战争：三国<i></i></a>
-            <a href="https://www.3dmgame.com/games/tropico6/" target="_blank"   >海岛大亨6<i></i></a>
-            <a href="https://www.3dmgame.com/games/dmc5/" target="_blank"   class="red"  >鬼泣5<i></i></a>
-            <a href="https://www.3dmgame.com/games/war3reforged/" target="_blank"   >魔兽争霸3<i></i></a>
-            <a href="https://www.3dmgame.com/games/codevain/" target="_blank"   class="red"  >噬血代码<i></i></a>
-        </div>
-        <div class="lis lis6">
-            <p>游戏活动 </p>
-            <a href="http://bbs.3dmgame.com/thread-5821013-1-1.html?tdsourcetag=s_pcqq_aiomsg" target="_blank"   >艾兰岛<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=570296385316&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   class="red"  >战地5<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=581536160310&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >辐射76<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=573386876544&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   class="red"  >暗黑血统3<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=576932118417&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >叛乱沙漠风暴<i></i></a>
-            <a href=" https://item.taobao.com/item.htm?id=571365250477&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >杀手2<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=577828061655&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >鬼泣5<i></i></a>
-            <a href="https://item.taobao.com/item.htm?spm=a1z09.8149145.0.0.bc926b14E0I9b9&id=581536731179&_u=n2lru6iu396" target="_blank"  rel="nofollow"   class="red"  >古剑奇谭3<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=577495327345&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >只狼<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=579155197643&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >使命召唤15<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=578236770223&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >皇牌空战7:未知空域<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=571480157444&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   class="red"  >正当防卫 4<i></i></a>
-            <a href="https://item.taobao.com/item.htm?id=583120360445&spm=2014.21600712.0.0" target="_blank"  rel="nofollow"   >生化危机2重制<i></i></a>
-        </div>
+        <?php $n++;}unset($n); ?>
+
     </div>
     <div class="Min_2">
         <div class="Min2_top">
@@ -202,36 +111,14 @@
                     <div class="ban2" id="ban_pic1">
                         <div class="lis"></div>
                         <ul>
+                            <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
                             <li>
-                                <a href="https://www.3dmgame.com/news/201812/3750712.html"  target="_blank"   ><img src="https://img.3dmgame.com/uploads/images/thumbnews/20181204/1543916437_234726.jpg" alt="《正当防卫4》明日发售价格昂贵 来3DM商店有优惠" /></a>
+                                <a href="<?php echo $r['url'];?>"  target="_blank"   ><img src="<?php echo $r['thumb'];?>" alt="<?php echo $r['title'];?>" /></a>
                                 <div class="bt">
-                                    <a href="https://www.3dmgame.com/news/201812/3750712.html"  target="_blank"   >《正当防卫4》明日发售价格昂贵 来3DM商店有优惠</a>
+                                    <a href="<?php echo $r['url'];?>"  target="_blank"   ><?php echo $r['title'];?></a>
                                 </div>
                             </li>
-                            <li>
-                                <a href="https://www.3dmgame.com/news/201812/3750694.html"  target="_blank"   ><img src="https://img.3dmgame.com/uploads/images/thumbnews/20181204/1543916494_809579.jpg" alt="《铁拳7》最新宣传片 《行尸走肉》尼根一棍爆头" /></a>
-                                <div class="bt">
-                                    <a href="https://www.3dmgame.com/news/201812/3750694.html"  target="_blank"   >《铁拳7》最新宣传片 《行尸走肉》尼根一棍爆头</a>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://www.3dmgame.com/news/201812/3750681.html"  target="_blank"   ><img src="https://img.3dmgame.com/uploads/images/thumbnews/20181204/1543916563_235432.jpg" alt="F-15C亮相 《皇牌空战7》机型介绍视频第一部公布" /></a>
-                                <div class="bt">
-                                    <a href="https://www.3dmgame.com/news/201812/3750681.html"  target="_blank"   >F-15C亮相 《皇牌空战7》机型介绍视频第一部公布</a>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://www.3dmgame.com/news/201812/3750691.html"  target="_blank"   ><img src="https://img.3dmgame.com/uploads/images/thumbnews/20181204/1543916614_971514.jpg" alt="《刺客信条：奥德赛》首个DLC视频 玩家可挑战袖剑老祖" /></a>
-                                <div class="bt">
-                                    <a href="https://www.3dmgame.com/news/201812/3750691.html"  target="_blank"   >《刺客信条：奥德赛》首个DLC视频 玩家可挑战袖剑老祖</a>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://3c.3dmgame.com/show-33-8983-1.html"  target="_blank"   ><img src="https://img.3dmgame.com/uploads/images/thumbnews/20181204/1543908253_906501.jpg" alt="硬件双十二有啥看头？教你正确姿势寻觅如意宝物" /></a>
-                                <div class="bt">
-                                    <a href="https://3c.3dmgame.com/show-33-8983-1.html"  target="_blank"   >硬件双十二有啥看头？教你正确姿势寻觅如意宝物</a>
-                                </div>
-                            </li>
+                            <?php $n++;}unset($n); ?>
                         </ul>
                     </div>
                     <div class="min_pic">

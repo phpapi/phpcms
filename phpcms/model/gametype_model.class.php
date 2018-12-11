@@ -33,6 +33,12 @@ class gametype_model extends model {
         $systeminfo['url'] = $data['url'];
 
         $systeminfo['typeid'] = $data['typeid'];
+
+        $systeminfo['color'] = $data['color'];
+        $systeminfo['sort'] = $data['sort'];
+
+        $systeminfo['inputtime'] = time();
+        $systeminfo['updatetime'] = time();
         //主表
 //        $tablename = $this->table_name = $this->db_tablepre.$this->model_tablename;
         $id = $this->insert($systeminfo,true);
@@ -109,6 +115,12 @@ class gametype_model extends model {
         $systeminfo['url'] = $data['url'];
 
         $systeminfo['typeid'] = $data['typeid'];
+
+        $systeminfo['color'] = $data['color'];
+        $systeminfo['sort'] = $data['sort'];
+
+        $systeminfo['inputtime'] = time();
+        $systeminfo['updatetime'] = time();
 
         //主表
 //        $tablename = $this->table_name = $this->db_tablepre.$this->model_tablename;
