@@ -1,0 +1,22 @@
+(function(){
+	var i={"id":"dygg_140","w":980,"h":90,"s":"http://tablet.doyo.cn/jump/gg?"};
+	var d=[{"id":1068,"m":["http:\/\/s1.doyo.cn\/upload\/20180912\/5ffbfce59c10ee7d8ccd.swf"],"u":["http:\/\/g.2jsu2.com\/s\/1\/812\/89752.html?uid=ct5"],"w":1}];
+	var c="display:block;position:relative;z-index:0;width:"+i.w+"px;height:"+i.h+"px;";
+	var g={
+		"m":function(m,o){if(m.indexOf(".swf")>0){o.s=1;m='<embed src="'+m+'" quality="high" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" style="display:block;width:'+(i.w>400?i.w:400)+'px;height:'+(i.h>300?i.h:300)+'px;'+(i.w>400?'':'margin:0 0 0 -'+(400-i.w)+'px;')+'filter:alpha(opacity=0);opacity:0;">';}else{o.s=0;m='<img src="'+m+'" style="display:block;width:'+i.w+'px;height:'+i.h+'px;">';};return m;},
+		"u":function(u){u='<a target="_blank" href="'+u+'" style="position:absolute;z-index:1;top:0;left:0;width:'+i.w+'px;height:'+i.h+'px;background:url(./img/bing.jpg);"></a>';return u;},
+		"s":function(t){$("<iframe src=\""+i.s+i.id+"-"+t+"\" style=\"width:0;height:0;border:0;\"></iframe>").appendTo("body");},
+		"i":function(){
+			var $=self.jQuery;
+			c+="margin:0 auto 15px auto;";
+			var p=$("script[src$='"+i.id+".js']");if(p.length!=1||d.length==0){return false;};
+			var w=0;$.each(d,function(i,n){w+=n.w;});var r=Math.random()*w;w=0;$.each(d,function(i,n){w+=n.w;if(r<w){d=d[i];return false;};});
+			var o=$("<ins style=\""+c+"\"></ins>").insertAfter(p);
+			if(d.m[0].length>0){var m=$(g.m(d.m[0],o)).appendTo(o);}else{o.hide()};
+			if(o.s){window.setTimeout(function(){m.css({"width":i.w,"height":i.h,"margin":0,"opacity":1});},300);};
+			if(d.u[0].length>0){var a=$(g.u(d.u[0])).appendTo(o).click(function(){g.s(d.id);});};
+			
+		}
+	};
+	if(self.jQuery){jQuery(function($){g.i();});};
+}());

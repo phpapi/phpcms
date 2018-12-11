@@ -1,0 +1,32 @@
+{template 'phpcms','header-2'}
+<script type="text/javascript" src="{$MODULE['comment']['linkurl']}include/js/comment.js"></script>
+<div class="wrap">
+<div class="sideleft bg3">
+<div class="sidebottom bg1">
+<div class="p3_12 b3">
+<h1>{$title}</h1>
+<p>共<font color="red"> {$totalnumber} </font>人参与评论，总评价为：<font color="red">{$avgscore}</font></p>
+</div>
+<div class="p6_12 b1">
+{comment_list(0, $keyid, $itemid, $page, 15, 1)}
+</div>
+<div class="p6_12 bgf b1">
+<div class="blank6"></div>
+<div class="comm tr f14">已有 <span class="red f14">{$totalnumber}</span> 位对此新闻感兴趣的网友发表了看法&nbsp;&nbsp;</div>
+<form name="commentform" method="post" action="{$MODULE['comment']['linkurl']}post.php"  onSubmit="return docheck();">
+<input name="keyid" type="hidden" value="{$keyid}">
+<input name="itemid" type="hidden" value="{$itemid}">
+<input name="title" type="hidden" value="{$title}">
+<input name="replycid" type="hidden" value="">
+<h6 class="m5_0">我来评两句:<input name="score" type="radio" class="radio" title="很差" value="1">1分 <input name="score" type="radio" class="radio" title="差" value="2">2分 <input name="score" type="radio" class="radio" title="一般" value="3" checked>3分 <input name="score" type="radio" class="radio" title="好" value="4">4分 <input name="score" type="radio" class="radio" title="很好" value="5">5分</h6>
+<textarea name="commentcontent" cols="80" rows="6" onclick="this.style.background='';" class="plbj" id="commentcontent" {if !$_userid && !$MOD['ischecklogin']}style="color:#cccccc;" readonly {/if}><!--{if !$_userid && !$MOD['ischecklogin']}-->游客不能发表评论<!--{/if}--></textarea><br/>
+<p class="p6 tr">&nbsp;&nbsp;<input name="dosubmit" type="submit" class="btn" value="发 表">&nbsp;&nbsp;&nbsp;&nbsp;<input name="reset" type="reset" class="btn" value="重 置"></p>
+</form>
+<div class="blank12"></div>
+<div class="tr"><a href="{$channelurl}"><img src="{PHPCMS_PATH}style/img/end_home.gif" alt="返回频道首页" /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{template 'phpcms','footer'}

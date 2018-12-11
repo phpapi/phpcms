@@ -1,0 +1,82 @@
+{template 'phpcms','header-4'}
+<div class="contentWrapper">
+<div class="content">
+<div class="innerContent">
+{if $search}<div class="contentBlock">
+<div class="contentText">
+<h3><span class="time">共计搜索到&nbsp;<font class="f_red">{$number}</font>&nbsp;篇与&nbsp;<font class="f_red">{$keywords}</font>&nbsp;相关的新闻</span>搜索结果</h3>
+{loop $searchs $article}
+<h4><span class="time">{$PHPCMS[sitename]}&nbsp;|&nbsp;{$article[adddate]}</span><a href="{$article[linkurl]}" target="_blank">{$article[title]}</a>{$article[type]}</h4>
+{if $article['introduce']}<p>{$article[introduce]}</p>{else}<p>暂无简介</p>{/if}
+<div style="height:3px;"></div>
+{/loop}
+<p>{$pages}</p>
+</div></div>{/if}
+<div class="contentBlock">
+<div class="contentText">
+<H3>搜索选项</H3>
+<table cellspacing="0" cellpadding="0" class="tab">
+<form name="myform" action="{$channelurl}search.php" method="get">
+<tr>
+<td width="20%">搜索范围</td>
+<td>
+<input type="radio" class="radio" name="searchtype" value="title" {if $searchtype=='title'}checked{/if}>标题
+<input type="radio" class="radio" name="searchtype" value="keywords" {if $searchtype=='keywords'}checked{/if}>关键字
+<input type="radio" class="radio" name="searchtype" value="introduce" {if $searchtype=='introduce'}checked{/if} />简介
+<input type="radio" class="radio" name="searchtype" value="content" {$searchtype['content']} {if !$PHPCMS['searchcontent']}disabled{/if} />内容
+</td></tr>
+<tr>
+<td>关&nbsp;键&nbsp;字</td>
+<td><input name="keywords" type="text" size="30" value="{$keywords}" />&nbsp;&nbsp;<font class="f_red">多个关键词之间请用空格隔开</font></td>
+</tr><tr>
+<td>所属栏目</td>
+<td>{$category_select}</td>
+</tr><tr>
+<td>附属分类</td>
+<td>{$type_select('typeid', '请选择', $typeid)}</td>
+</tr><tr>
+<td>添加日期</td>
+<td>{$date_select('fromdate', $fromdate)} 至 {$date_select('todate', $todate)}&nbsp;&nbsp;<font class="f_red">格式：yyyy-mm-dd</font></td>
+</tr><tr>
+<td>排序方式</td>
+<td colspan="3"><select name="ordertype">
+<option value="0" {if $ordertype==0}selected{/if}>新闻发表排序</option>
+<option value="1" {if $ordertype==1}selected{/if}>更新时间降序</option>
+<option value="2" {if $ordertype==2}selected{/if}>更新时间升序</option>
+<option value="3" {if $ordertype==3}selected{/if}>浏览次数降序</option>
+<option value="4" {if $ordertype==4}selected{/if}>浏览次数升序</option>
+<option value="5" {if $ordertype==5}selected{/if}>评论次数降序</option>
+<option value="6" {if $ordertype==6}selected{/if}>评论次数升序</option>
+</select></td>
+</tr><tr>
+<td height="30" >&nbsp;</td>
+<td colspan="3"><input type="hidden" name="search" value="1"><input type="submit" value="搜索" class="btn" />　　<input type="button" onClick="window.location='search.php'" value="重置" class="btn" /></td>
+</tr></form>
+</table>
+</div></div>
+</div></div>
+<div class="sidebar">
+<div class=innerSidebar">
+<div class="sidebarBlock">
+<h5>天气预报</h5>
+<div class="sidebarContent">
+<IFRAME class="wel_w_if" src="http://mimg.126.com/tianqi/city/58367.html" frameBorder=0 scrolling=no></IFRAME>
+</div></div>
+<div class="sidebarBlock">
+<h5>{$CHA[channelname]}频道下属栏目</h5>
+<div class="sidebarContent">
+<ul>
+{tag_频道一级栏目}
+</ul>
+</div></div>
+<div class="sidebarBlock">
+<h5>赞助商链接</h5>
+<div class="sidebarContent">
+<ul>
+<li><A href="http://www.feidc.com.cn/" target="_blank">非对称中文网</A></li>
+<li><A href="#">2#待定</A></li>
+<li><A href="#">3#待定</A></li>
+</ul>
+</div></div></div></div>
+</div>
+{template 'phpcms','footer'}

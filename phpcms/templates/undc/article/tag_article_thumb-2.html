@@ -1,0 +1,4 @@
+{loop $articles $i $article}
+<div class="col"><a href="{$article['linkurl']}" {$target}><img src="{$article[thumb]}" width="{$imgwidth}" height="{$imgheight}" alt="{$article[alt]}" /></a> 
+<h6><a href="{$article['linkurl']}" {$target}>{$article[stitle]}</a></h6></div>
+{/loop}

@@ -1,0 +1,197 @@
+{template 'phpcms','header-6'}
+<script type="text/javascript">
+function fontZoom(size)
+{
+   $('content').style.fontSize=size+'px';
+}
+</script>
+<div class="wrap">
+<div class="sideleft bg3">
+<div class="m1 p3 bgf"><!--AD--></div>
+<div class="p3_12_1 bgf">当前位置：<a href="{$channelurl}">{$channelname}首页</a> >> {$position}正文</div>
+<div class="p6_12_1 b3 bg1">
+{if $subheading}<p class="f_gray">——{$subheading}</p>{/if}
+<h1>{$title} {if $paginationtype && $page}{$page}{/if}</h1>
+<p>{$adddate}　来源：{$copyfromname}　<a href="http://bbs.hunanxw.com/" class="red">论坛交流</a></p>
+</div>
+<div class="p6_12_1 bg1">
+{if $introduce}<div class="introduce">　　{$introduce}</div>{/if}
+<div id="content">
+{$content}
+</div>
+<div class="blank9"></div>
+<p style="font-size:12px;color:#666666;text-indent:2em">湖南新闻声明：本版多数文章来源于互联网，内容纯属作者个人观点，仅供投资者参考，并不构成投资建议。投资者据此操作，风险自担。</p><br />
+<div class="m5_0 PageNum">{$pages}</div>
+{if $keys}<div class="blank6"></div>
+<h4 class="f_gray i6">关于 {loop $keys $key}<a href="{$channelurl}search.php?searchtype=keywords&keywords={urlencode($key)}&search=1" target="_blank" class="f14 blue">{$key}</a>{/loop} 的新闻</h4>{/if}
+<ul class="i1 f14 xgtext">
+{tag_相关文章列表}
+</ul>
+<div class="blank3"></div>
+</div>
+<script type="text/javascript">
+function ImgZoom(Id)//重新设置图片大小 防止撑破表格
+{
+	var w = $(Id).width;
+	var m = {$img_maxwidth};
+	if(w < m)
+	{
+		return;
+	}
+	else
+	{
+		var h = $(Id).height;
+		$(Id).height = parseInt(h*m/w);
+		$(Id).width = m;
+	}
+}
+window.onload = function()
+{
+	var Imgs = $("content").getElementsByTagName("img");
+	var i=0;
+	for(;i<Imgs.length;i++)
+	{
+		ImgZoom(Imgs[i]);
+	}
+}
+</script>
+<div class="p6_12 bgf sidebottom">
+<script type="text/javascript" src="{$MODULE['comment']['linkurl']}list_js.php?keyid={$channelid}&itemid={$articleid}&commentnum=10&ordertype=1&title={$urlencode($title)}"></script>
+<h6 class="i5">Google提供的广告</h6>
+<div style="height:62px">被过滤的广告</div>
+<div class="blank6"></div>
+<h6 class="i5">今日推荐</h6>
+<div class="picText1">
+{tag_内容页频道图片}
+</div>
+<div class="blank12"></div>
+<div class="tr"><a href="{$channelurl}"><img src="{PHPCMS_PATH}style/img/end_home.gif" alt="返回频道首页" /></a></div>
+<div class="blank12"></div>
+</div>
+</div>
+<div class="sideright bg3">
+<div class="bgf sidebottom">
+<div class="p3 bgf b1"><!--AD--></div>
+<div class="p3_12 cb">
+<div class="pic">
+<a href="{$channelurl}"><img src="{PHPCMS_PATH}style/img/{$CHA['channeldir']}.gif" alt="{$channelname}频道"></a>
+</div>
+<div class="text">
+<ul class="i2">{tag_内容频道焦点}</ul>
+</div>
+</div>
+<ul class="p3_12 i1 b2 cb">
+{tag_内容页面最新文章列表}
+</ul>
+<div class="p3_12">
+<div class="blank6"></div>
+<div class="rightcontent">
+<script language="javascript">
+function showNews(i)
+{
+ switch(i)
+ {
+ case 1:
+ document.getElementById("carenews01").style.display="block";
+ document.getElementById("carenews02").style.display="none";
+ document.getElementById("carenews03").style.display="none";
+ break;
+ case 2:
+ document.getElementById("carenews01").style.display="none";
+ document.getElementById("carenews02").style.display="block";
+ document.getElementById("carenews03").style.display="none";
+ break;
+ case 3:
+ document.getElementById("carenews01").style.display="none";
+ document.getElementById("carenews02").style.display="none";
+ document.getElementById("carenews03").style.display="block";
+ break;
+ }
+}
+</script>
+<div id="carenews01" style="display:block;">
+<div class="title">
+<ul>
+<li class="active">
+<h2>网友最关心的新闻</h2>
+</li>
+<li>
+<h2><a href="javascript:showNews(2);" target="_self">新闻语录</a></h2>
+</li>
+<li>
+<h2><a href="javascript:showNews(3);" target="_self">可乐图文</a></h2>
+</li>
+</ul>
+</div>
+<div class="list">
+<ul>
+{tag_内容页网友关心话题}
+</ul>
+</div>
+<div class="more"><span><a href="#">更多</a></span></div>
+</div>
+<div id="carenews02" style="display:none;">
+<div class="title">
+<ul>
+<li>
+<h2><a href="javascript:showNews(1);" target="_self">网友最关心的新闻</a></h2>
+</li>
+<li class="active">
+<h2>新闻语录</h2>
+</li>
+<li>
+<h2><a href="javascript:showNews(3);" target="_self">可乐图文</a></h2>
+</li>
+</ul>
+</div>
+<div class="list">
+<ul>
+{tag_内容页新闻语录}
+</ul>
+</div>
+<div class="more"><span><a href="#">更多</a></span></div>
+</div>
+<div id="carenews03" style="display:none;">
+<div class="title">
+<ul>
+<li>
+<h2><a href="javascript:showNews(1);" target="_self">网友最关心的新闻</a></h2>
+</li>
+<li>
+<h2><a href="javascript:showNews(2);" target="_self">新闻语录</a></h2>
+</li>
+<li class="active">
+<h2>可乐图文</h2>
+</li>
+</ul>
+</div>
+<div class="list">
+<ul>
+{tag_内容页可乐图文}
+</ul>
+</div>
+<div class="more"><span><a href="#">更多</a></span></div>
+</div>
+</div>
+<div class="blank3"></div>
+<div class="righttitle"><h6>新闻图片</h6></div>
+<div class="picText2">
+{tag_内容页频道热点图片}
+</div>
+<div class="blank6"></div>
+</div>
+<hr color=#577284 size=1 />
+<div class="p3_12 tc" style="height:250px;">被过滤的广告
+</div>
+<div class="p3_12">
+<div class="righttitle"><h6>热点文章</h6></div>
+<ul class="i2 cb">
+{tag_热点文章列表}
+</ul>
+</div>
+<hr color=#577284 size=1 /></div>
+</div>
+<div class="bg_content"></div>
+</div>
+<div class="blank12"></div>
+{template 'phpcms','footer-6'}

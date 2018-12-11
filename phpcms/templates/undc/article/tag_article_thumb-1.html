@@ -1,0 +1,5 @@
+{loop $articles $i $article}
+<a href="{$article['linkurl']}" {$target}><img src="{$article[thumb]}" width="{$imgwidth}" height="{$imgheight}" alt="{$article[alt]}" /></a> 
+<h2><a href="{$article['linkurl']}" {$target}>{$article[stitle]}</a></h2>
+<p>¡¡¡¡{$article[introduce]}&nbsp;&nbsp;<img src="{PHPCMS_PATH}style/img/i8.gif" />&nbsp;<a href="{$article['linkurl']}" {$target} class="red">ÏêÏ¸</a></p>
+{/loop}

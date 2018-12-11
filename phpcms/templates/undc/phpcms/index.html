@@ -1,0 +1,382 @@
+{template 'phpcms','header'}
+<div class="Index-ad-1">
+<div class="Index-Leftad-1"></div>
+<div class="Index-Rightad-1">
+<h1><img src="{$skindir}/images/ad_title.gif" width="27" height="88" alt="广告"></h1>
+<div class="adkuang"><a href="http://www.chinalanqi.com">中国兰奇童装网</a> <a href="http://www.feidc.com.cn">非对称中文网</a> <a href="http://www.feidc.com.cn">化妆</a> <a href="http://www.13132.com.cn">眼镜批发</a><br />
+  <a href="http://www.liuhengnet.com/page/page_9.html">NBA季前赛赛程</a> <A href="http://liuhengnet.com/page/page_10.html" target="_blank">沈家门客轮船期时刻表</A></div>
+</div>
+</div>
+<div class="main">
+    <div class="Left-tjkuang">
+    <div class="t-main">
+        <div id="info">
+  <div id="kjj_tag"></div>
+  <ul>
+    <li id="tag1"><h4><a href="javascript:kijijitag('1');">新闻</a></h4></li>
+    <li id="tag2"><h4><a href="javascript:kijijitag('2');" >娱乐</a></h4></li>
+    <li id="tag3"><h4><a href="javascript:kijijitag('3');" >教育</a></h4></li>
+    <li id="tag4"><h4><a href="javascript:kijijitag('4');" >游戏</a></h4></li>
+    <li id="tag5"><h4><a href="javascript:kijijitag('5');" >饮食</a></h4></li>
+     <li id="tag6"><h4><a href="javascript:kijijitag('6');" >汽车</a></h4></li>
+     <li id="tag7"><h4><a href="javascript:kijijitag('7');" >旅游</a></h4></li>
+  </ul>
+  <div id="info1">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_全球图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_全球新闻}</td>
+  </tr>
+</table>
+  </div>
+  <div id="info2">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_娱乐图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_娱乐文章}</td>
+  </tr>
+</table>
+  </div>
+  <div id="info3">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_教育图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_教育文章}</td>
+  </tr>
+</table>
+  </div>
+  <div id="info4">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_游戏图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_游戏文章}</td>
+  </tr>
+</table>
+  </div>
+  <div id="info5">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_饮食图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_饮食文章}</td>
+  </tr>
+</table>
+  </div>
+    <div id="info6">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_汽车图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_汽车文章}</td>
+  </tr>
+</table>
+    </div>
+      <div id="info7">    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30%">{tag_旅游图片}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_旅游文章}</td>
+  </tr>
+</table></div>
+</div>
+<script language="javascript">
+ var k = Math.floor(Math.random()*5+1); 
+ for(i=1; i <8; i++){
+  if( i==k){
+   document.getElementById("info"+i).className="sw";
+   document.getElementById("tag"+i).className="ha";
+   document.getElementById("tag"+i).getElementsByTagName("h4")[0].className="hb";
+   document.getElementById("tag"+i).getElementsByTagName("a")[0].className="hc";
+  }
+  else{
+   document.getElementById("info"+i).className="hd";
+  }
+ }
+function kijijitag(tag){ 
+ for(i=1; i <8; i++)
+ {
+  if (i==tag)
+  { 
+   document.getElementById("info"+i).className="sw";
+   document.getElementById("tag"+i).className="ha";
+   document.getElementById("tag"+i).getElementsByTagName("h4")[0].className="hb";
+   document.getElementById("tag"+i).getElementsByTagName("a")[0].className="hc";
+  }
+  else{
+   document.getElementById("info"+i).className="hd";
+   document.getElementById("tag"+i).className="";
+   document.getElementById("tag"+i).getElementsByTagName("h4")[0].className="";
+   document.getElementById("tag"+i).getElementsByTagName("a")[0].className="";
+  } 
+ }
+}
+</script>
+<div class="zhuanti">
+<h1><img src="{$skindir}/images/zhuanti.gif" width="27" height="88" alt="专题"></h1>
+<div class="zhuantituijian">{tag_首页专题标题}</div>
+</div></div>
+        <div class="dbiaoti">{tag_六横推荐新闻}</div>
+        <div class="liuhengnews">{tag_六横新闻}</div>            
+    </div>
+    <div class="Right-gonggao"><img src="{$skindir}/images/gongga.gif" alt="广告"></div>
+    <div class="Right-tjkuang">{tag_网站首页幻灯片}</div>
+    <div class="Right-tjkuang1">
+<div class="c-biaoti1">影视推荐<a href="http://www.liuhengnet.com/bbs/forumdisplay.php?fid=10"><img src="{$skindir}/images/more_eng.gif" alt="更多"></a></div>
+<div class="c-conent1"><a href="http://www.liuhengnet.com/bbs/viewthread.php?tid=1001&extra=page%3D1"><img src="{$skindir}/images/yinshituijian.gif" alt="广告"></a></div>
+</div>
+    <div class="Index-ad-2"><img src="{$skindir}/images/ad2.gif" alt="广告"></div>
+    <div class="clean"></div>
+<div class="Left-main">
+    <div class="Left-tjkuang2">
+    	<div class="c-biaoti">船舶信息<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent">{tag_船舶最新文章}</div>    
+</div>
+    <div class="Center-tuijian">
+    	<div class="c-biaoti2">财经<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="40%">{tag_财经图片}</td>
+    <td width="60%">{tag_财经文章}</td>
+  </tr>
+</table></div>    
+</div>
+    <div class="Center-tuijian">
+    	<div class="c-biaoti2">体育<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="40%">{tag_体育图片}</td>
+    <td width="60%">{tag_体育文章}</td>
+  </tr>
+</table></div>  
+</div>
+    <div class="Index-ad-3"><img src="{$skindir}/images/ad4.gif" alt="广告"></div>
+</div> 
+    <div class="Index-Rightad-2"><img src="{$skindir}/images/ad3.gif" alt="广告"></div>
+    <div class="Right-tjkuang2">
+    <script type="text/javascript" language="javascript">
+<!--
+function g(o){return document.getElementById(o);}
+function HoverLi(n)
+{
+	//如果有N个标签,就将i<=N;
+	for(var i=1;i<=6;i++){g('tb_'+i).className='normaltab';g('tbc_0'+i).className='undis';}
+	g('tbc_0'+n).className='dis';g('tb_'+n).className='hovertab';
+}
+//-->
+</script>
+<div class="w936">
+	<div id="tb_" class="tb_">
+			<ul> 
+				<li id="tb_1" class="hovertab" onMouseOver="xgz:HoverLi(1);">二手</li>
+				<li id="tb_2" class="normaltab" onMouseOver="xgz:HoverLi(2);">服务</li>
+				<li id="tb_3" class="normaltab" onMouseOver="xgz:HoverLi(3);">美食</li>
+				<li id="tb_4" class="normaltab" onMouseOver="xgz:HoverLi(4);">培训</li>
+				<li id="tb_5" class="normaltab" onMouseOver="xgz:HoverLi(5);">酒店</li>
+				<li id="tb_6" class="normaltab" onMouseOver="xgz:HoverLi(6);">打折</li>
+                       <li><img src="{$skindir}/images/more_eng.gif" alt="更多"></li>      
+			</ul>
+	</div>
+	<div class="ctt">
+		<div class="dis" id="tbc_01"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_二手图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_二手信息}</td>
+  </tr>
+</table></div>
+		<div class="undis" id="tbc_02"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_服务图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_服务信息}</td>
+  </tr>
+</table></div>
+		<div class="undis" id="tbc_03"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_美食图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_美食信息}</td>
+  </tr>
+</table></div>
+		<div class="undis" id="tbc_04"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_培训图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_培训信息}</td>
+  </tr>
+</table></div>
+		<div class="undis" id="tbc_05"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_酒店图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_酒店信息}</td>
+  </tr>
+</table></div>
+		<div class="undis" id="tbc_06"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_打折图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_打折信息}</td>
+  </tr>
+</table></div>
+	</div>
+</div>
+    </div>
+    <div class="Right-tjkuang3">
+<div class="c-biaoti1">六横旅游<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent1"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="40%">{tag_六横旅游图}</td>
+    <td height="50%">{tag_六横旅游信息}</td>
+  </tr>
+</table></div>
+</div>
+    <div class="clean"></div>
+<div class="Left-main">
+    <div class="Left-tjkuang2">
+<div class="c-biaoti">健康生活<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent">{tag_最新健康文章}</div>
+</div>
+    <div class="Center-tuijian">
+    	<div class="c-biaoti2">军事<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="40%">{tag_军事图片}</td>
+    <td width="60%">{tag_军事新闻}</td>
+  </tr>
+</table></div>  
+</div>
+    <div class="Center-tuijian">
+    	<div class="c-biaoti2">女性<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="40%">{tag_女性图片}</td>
+    <td width="60%">{tag_女性文章}</td>
+  </tr>
+</table></div>  
+</div>
+    <div class="Index-ad-3"><img src="{$skindir}/images/ad6.gif" alt="广告"></div>
+</div> 
+    <div class="Index-Rightad-2"><img src="{$skindir}/images/ad7.gif" alt="广告"></div>
+    <div class="Right-tjkuang2">
+<script type="text/javascript" language="javascript">
+<!--
+function g(o){return document.getElementById(o);}
+function HoverLt(n)
+{
+	//如果有N个标签,就将i<=N;
+	for(var i=1;i<=3;i++){g('tc_'+i).className='normaltab';g('tcc_0'+i).className='undis';}
+	g('tcc_0'+n).className='dis';g('tc_'+n).className='hovertab';
+}
+//-->
+</script>
+<div class="w936">
+	<div id="tc_" class="tc_">
+		<ul> 
+		<li id="tc_1" class="hovertab" onMouseOver="xgz:HoverLt(1);">招聘</li>
+		<li id="tc_2" class="normaltab" onMouseOver="xgz:HoverLt(2);">求职</li>
+                <li id="tc_3" class="normaltab" onMouseOver="xgz:HoverLt(3);">简历吧</li>             
+		</ul>
+	</div>
+	<div class="ctt">
+		<div class="dis" id="tcc_01"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_招聘图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_招聘信息}</td>
+  </tr>
+</table></div>
+		<div class="undis" id="tcc_02"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_求职图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_求职信息}</td>
+  </tr>
+</table></div>
+        <div class="undis" id="tcc_03"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30%">{tag_简历图}</td>
+  </tr>
+  <tr>
+    <td height="70%">{tag_简历信息}</td>
+  </tr>
+</table></div>
+	</div>
+</div>
+    </div>
+    <div class="Right-tjkuang3">
+<div class="c-biaoti1">便民工具<img src="{$skindir}/images/more_eng.gif" alt="更多"></div>
+<div class="c-conent1"><table width="100%" height="114" cellpadding="0" cellspacing="3">
+  <tr>
+    <td width="70" align="center"><a href="http://weather.tq121.com.cn/">天气预报</a></td>
+    <td width="70" align="center"><a href="http://www.liuhengnet.com/ss/fy.htm" target="_blank">在线翻译</a></td>
+    <td width="70" align="center"><a href="http://www.lottery.gov.cn/" target="_blank">体育彩票</a></td>
+    <td width="70" align="center"><a href="http://www.521yy.com/tools/born.htm" target="_blank">生肖查询</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.liuhengnet.com/kuaidi.htm" target="_blank">快递查询</a></td>
+    <td align="center"><a href="http://www.zdic.net/">字典词典</a></td>
+    <td align="center"><a href="http://www.nongli.com/item4/" target="_blank">中国黄历</a></td>
+    <td align="center"><a href="http://www.airticket.com.cn/JumpLink/51jp.aspx" target="_blank">机票查询</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://health.sohu.com/medisearch.html" target="_blank">疾病查询</a></td>
+    <td align="center"><a href="http://www.liuhengnet.com/ss/lccx.htm" target="_blank">列车时刻</a></td>
+    <td align="center"><a href="http://www.liuhengnet.com/xzcx.htm" target="_blank">星座查询</a></td>
+    <td align="center"><a href="http://www.183zs.com.cn/183paper/paperselect.asp" target="_blank">报刊查询</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.joyo.com/?source=senlon">网上购物</a></td>
+    <td align="center"><a href="http://sp.jdzx.net.cn:6080/jdzx/jsp/xwfb/slpssearch.jsp" target="_blank">企业查询</a></td>
+    <td align="center"><a href="http://www.imobile114.com/" target="_blank">公交查询</a></td>
+    <td align="center"><a href="http://site.baidu.com/list/wannianli.htm" target="_blank">万年历</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.sipo.gov.cn/sipo/zljs/default.htm" target="_blank">专利查询</a></td>
+    <td align="center"><a href="http://www.521yy.com/tools/asp/Health.asp" target="_blank">健康查询</a></td>
+    <td align="center"><a href="http://www.521yy.com/tools/asp/Jinzhi.asp" target="_blank">进制转换</a></td>
+    <td align="center"><a href="http://www.521yy.com/tools/asp/sejie.asp" target="_blank">网页取色</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.521yy.com/tools/chartool.html" target="_blank">LD5工具</a></td>
+    <td align="center"><a href="http://www.521yy.com/tools/dulianhe.htm" target="_blank">度量转换</a></td>
+    <td align="center"><a href="http://www.521yy.com/tools/search.htm" target="_blank">超级搜索</a></td>
+    <td align="center"><a href="http://www.hongen.com/info/school/index.htm" target="_blank">学校查询</a></td>
+  </tr>
+  <tr>
+    <td align="center"><div align="center"><a href="http://fund.eastmoney.com/fund.html">基金净值</a></div></td>
+    <td align="center"><div align="center"><a href="http://quote.eastmoney.com/quote1_1.html">股票行情</a></div></td>
+    <td align="center"><a href="http://www.mtime.com/showtime/">各地影讯</a></td>
+    <td align="center"><a href="http://www.sflink.cn/Monitor/Monitor.aspx?PlaceID=625&amp;TargetUrl=http%3a%2f%2fhi.www.net.cn%2fhi%2fhao123%2fhao123_dh_index.htm">域名查询</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://law.baidu.com/">法律搜索</a></td>
+    <td align="center"><a href="http://www.chsi.com.cn/xlcx/">学历查询</a></td>
+    <td align="center"><a href="http://www.hao123.com/haoserver/jiaotongcx.htm">交通违章查询</a></td>
+    <td align="center"><a href="http://www.fh21.com.cn/ying/new/chengfen.htm">营养成分</a></td>
+  </tr>
+</table></div>
+</div>
+    <div class="Index-ad-2"><img src="{$skindir}/images/ad5.gif" alt="广告"></div>
+    <div class="clean"></div>
+</div>
+{template 'phpcms','footer'}

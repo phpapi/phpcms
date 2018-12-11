@@ -1,0 +1,58 @@
+{template 'phpcms','header-5'}
+<div class="wrap">
+<div style="height:22px;border:1px solid #E6E6E6;padding:4px 12px;">
+<div class="fl">当前位置：<a href="{$CHA[linkurl]}">频道首页</a> >> <a href="{$CHA[linkurl]}type.php">类别首页</a></div>
+</div>
+</div>
+<div class="blank12"></div>
+<!--{loop $TYPE $typeid $type}-->
+<div class="wrap">
+<div class="sideleft">
+<div class="sidebottom bgf">
+<div class="i12 p6_12">
+<div class="m5_0 p3_12 b1">
+<h6 class="fn">进入〖<a href="{$CHA[linkurl]}type.php?typeid={$type[typeid]}" class="red">{$type[name]}</a>〗</h6>
+</div>
+<div class="blank6"></div>
+{tag_类别推荐调用三}
+<div class="blank6"></div>
+<ul class="i1 f14">
+{tag_类别四列调用}
+</ul>
+<div class="blank3"></div>
+<div class="pictext2">
+{tag_类别推荐图片文章}
+</div>
+</div>
+</div>
+<div class="blank6 b1"></div>
+<div class="sidebottom bgf p6_12">
+被过滤的广告
+</div>
+</div>
+<div class="sideright">
+<div class="sidebottom bg1 p6">
+<div class="pictext1">
+{tag_类别热点图片}
+</div>
+<div class="blank3"></div>
+<div class="righttitle"><h6>热点观注</h6></div>
+<ul class="i2 cb">
+{tag_类别首页热点文章}
+</ul>
+<div class="blank3"></div>
+<div class="righttitle"><h6>最新评论</h6></div>
+<ul class="i2 cb">
+{tag_类别首页评论文章}
+</ul>
+</div>
+<div class="blank6 b1"></div>
+<div class="sidebottom bg1 p6">
+被过滤的广告
+</div>
+</div>
+<div class="bg_index"></div>
+</div>
+<div class="blank12"></div>
+{/loop}
+{template 'phpcms','footer-5'}

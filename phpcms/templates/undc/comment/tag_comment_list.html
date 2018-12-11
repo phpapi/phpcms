@@ -1,0 +1,11 @@
+<!--{loop $comments $comment}-->
+<p>网友：<!--{if $comment['username']}--><!--{$comment[username]}--><!--{else}-->{$comment[ip]}<!--{/if}-->&nbsp;评分：{$comment[score]}
+{if !$info}
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="###" onclick="addone('flower',{$comment[cid]});" title="支持该观点" class="red">支持</a>(<span id="flower{$comment[cid]}">{$comment[support]}</span>)&nbsp;&nbsp;<a href="###" onclick="addone('egg',{$comment[cid]});"  title="反对该观点" class="blue">反对</a>(<span id="egg{$comment[cid]}">{$comment[against]}</span>){/if}</p>
+<p>{$comment[content]}</p>
+<p class="tr">{$comment[addtime]}&nbsp;&nbsp;发表</p>
+<div class="hr"></div>
+<!--{/loop}-->
+<!--{if isset($pages)}-->
+<div class="pages">{$pages}</div>
+<!--{/if}-->

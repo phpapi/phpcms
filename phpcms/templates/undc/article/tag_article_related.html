@@ -1,0 +1,4 @@
+{loop $articles $article}<li><a href="{$article[linkurl]}">{$article[title]}</a>
+{if $article['showcommentlink']}&nbsp;<a href="{$MODULE['comment']['linkurl']}index.php?keyid={$channelid}&itemid={$article[articleid]}&itemurl={$urlencode($article[linkurl])}&title={$urlencode($article[title])}" target="_blank"><span class="font_red">ÆÀ</span></a> {/if}
+{if $datetype}[<span class="datetime">{$article[adddate]}</span>]{/if}
+</li>{/loop}

@@ -1,0 +1,117 @@
+{template 'phpcms','header-1'}
+<div class="wrap">
+<div class="sideleft">
+<div class="sidebottom bgf p6_12">
+{tag_栏目首页综合推荐}
+<div class="blank3"></div>
+<div class="m5_0 p3_12 b1_1 bg1">
+<h6 class="i5">{tag_频道子栏目列表}</h6>
+</div>
+<div class="blank6"></div>
+<!--{loop $arrchildid $i $childcat}-->
+<ul class="i1 f14">
+{tag_子栏目文章列表}
+</ul>
+{if $i%1!=1}<div class="hr"></div>{/if}{/loop}
+<div class="pictext2">
+{tag_栏目首页图片}
+</div>
+</div>
+<div class="blank6 b1"></div>
+<div class="sidebottom bgf p6_12">
+<script type="text/javascript"><!--
+google_ad_client = "pub-0762877019801870";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as_rimg";
+google_cpa_choice = "CAEQ9ZSgnAIaCB3iK5myixx7KJnA93M";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div class="sideright">
+<div class="sidebottom bg1 p6">
+<div class="pictext1">
+{tag_栏目首页热点图片}
+</div>
+<div class="blank3"></div>
+<div class="righttitle"><h6>热点观注</h6></div>
+<ul class="i2 cb">
+{tag_栏目首页热点文章}
+</ul>
+<div class="blank3"></div>
+<div class="righttitle"><h6>最新评论</h6></div>
+<ul class="i2 cb">
+{tag_栏目首页评论文章}
+</ul>
+</div>
+<div class="blank6 b1"></div>
+<div class="sidebottom bg1 p6">
+被过滤的广告
+</div>
+</div>
+<div class="bg_index"></div>
+</div>
+<div class="blank12"></div>
+<!--{loop $arrchildid $i $childcat}-->
+<div class="wrap">
+<div class="sideleft">
+<div class="sidebottom bgf">
+<div class="i12 p6_12">
+<div class="m5_0 p3_12 b1">
+<h6 class="fn">进入〖<a href="{$childcat[linkurl]}" class="red">{$childcat[catname]}</a>〗</h6>
+</div>
+<div class="blank6"></div>
+{tag_子栏目推荐调用三}
+<div class="blank6"></div>
+<ul class="i1 f14">
+{tag_子栏目四列}
+</ul>
+<div class="blank3"></div>
+<div class="pictext2">
+{tag_子栏目图片最新}
+</div>
+</div>
+</div>
+<div class="blank6 b1"></div>
+<div class="sidebottom bgf p6_12">
+<script type="text/javascript"><!--
+google_ad_client = "pub-0762877019801870";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_cpa_choice = "CAEQ6YiG7AMaCNNvaag0wbwLKJX-oskB";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<div class="sideright">
+<div class="sidebottom bg1 p6">
+<div class="pictext1">
+{tag_子栏目图片热点}
+</div>
+<div class="blank3"></div>
+<div class="righttitle"><h6>热点观注</h6></div>
+<ul class="i2 cb">
+{tag_子栏目文章热点}
+</ul>
+<div class="blank3"></div>
+<div class="righttitle"><h6>最新评论</h6></div>
+<ul class="i2 cb">
+{tag_子栏目评论文章}
+</ul>
+</div>
+<div class="blank6 b1"></div>
+<div class="sidebottom bg1 p6">
+被过滤的广告
+</div>
+</div>
+<div class="bg_index"></div>
+</div>
+<div class="blank12"></div>
+{/loop}
+{template 'phpcms','footer'}

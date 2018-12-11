@@ -1,0 +1,9 @@
+<?php
+$templatenames = array (
+  'index.html' => '×ÉÑ¯Ê×Ò³',
+  'list.html' => '×ÉÑ¯ÁÐ±íÒ³',
+  'menu.html' => 'µ¼º½²Ëµ¥',
+  'post.html' => '·¢±í×ÉÑ¯',
+  'show.html' => 'ÏÔÊ¾×ÉÑ¯',
+);
+?>

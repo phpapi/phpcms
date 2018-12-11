@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$CONFIG[charset]}">
+<title>{$head[title]}-{$PHPCMS[sitename]}</title>
+<meta name="keywords" content="{$head[keywords]}">
+<meta name="description" content="{$head[description]}">
+<meta name="generator" content="Phpcms {$PHPCMS[version]}">
+<link href="{PHPCMS_PATH}favicon.ico" rel="shortcut icon">
+<link href="{$skindir}/serch.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="{PHPCMS_PATH}data/js/config.js"></script>
+<script language="javascript" src="{PHPCMS_PATH}include/js/common.js"></script>
+<script language="javascript" src="{PHPCMS_PATH}include/js/prototype.js"></script>
+</head>
+
+<body {if isset($enableprotect) && $enableprotect}oncontextmenu='return false' ondragstart='return false' onselectstart ='return false' onselect='document.selection.empty()' oncopy='document.selection.empty()' onbeforecopy='return false'{/if}>
+<div class="header1">
+<table width="980" cellpadding="0" cellspacing="0" class="bg_login">
+    <tr>
+	 <td width="200" align="center"><!--时间--><script language="JavaScript" src="{PHPCMS_PATH}include/js/time.js"></script>
+     </td>
+    <td width="38" align="right">
+<!--{if $channelid && isset($MOD['enable_rss']) && $MOD['enable_rss']}-->
+	<a href="{$CHA[linkurl]}rss.php{if isset($catid)}?catid={$catid}{/if}" target="_blank"><img src="{PHPCMS_PATH}images/rss.gif" border="0"/></a>
+<!--{/if}-->
+	</td>
+    <td width="*" align="right">
+	<!--会员登录-->
+    <script language="javascript" src="{$MODULE[member][linkurl]}login.php?action=js"></script>
+	</td>
+  </tr>
+</table>
+<div class="globalNav">
+	<ul class="content1"> 
+            <li><a href="http://www.liuhengnet.com/" target="_blank">首 页</a></li>
+			<li><a href="http://www.liuhengnet.com/article/index.html" target="_blank">新 闻</a></li>
+			<li><a href="http://www.liuhengnet.com/article/caijing/" target="_blank">财  经</a></li>
+
+            <li><a href="http://www.liuhengnet.com/article/yule/" target="_blank"  class="Aorange">娱  乐</a></li>
+			<li><a href="http://www.liuhengnet.com/article/junshi/" target="_blank">军 事</a></li>
+			<li><a href="http://www.liuhengnet.com/lvyou/" target="_blank">旅  游</a></li>
+			<li><a href="http://www.liuhengnet.com/bbs/" target="_blank">论  坛</a></li>
+            <li class="s1"><a href="http://www.liuhengnet.com/article/liuhengnews/" target="_blank" class="Aorange">六横新闻</a></li>
+            <li><a href="http://www.liuhengnet.com/article/quanqiu/" target="_blank">全 球</a></li>
+
+			<li><a href="http://www.liuhengnet.com/article/nvxing/" target="_blank">女 性</a></li>
+			<li class="s"><a href="http://www.liuhengnet.com/movie/" target="_blank">电 影</a></li>
+			<li><a href="http://www.liuhengnet.com/article/jiankang/" target="_blank">健 康</a></li>
+			<li><a href="http://www.liuhengnet.com/article/jiaoyu/" target="_blank">教 育</a></li>
+			<li><a href="http://www.liuhengnet.com/article/yinshi/" target="_blank">饮 食</a></li>
+			<li><a href="http://www.liuhengnet.com/article/youxi/" target="_blank">游 戏</a></li>
+
+			<li><a href="http://www.liuhengnet.com/info/ershou/" target="_blank">二 手</a></li>
+            <li><a href="http://www.liuhengnet.com/info/fuwu/" target="_blank">服 务</a></li>
+			<li><a href="http://www.liuhengnet.com/info/dazhe/" target="_blank">打 折</a></li>
+			<li class="s1"><a href="http://www.liuhengnet.com/info/jianli/" target="_blank">简 历 吧</a></li>
+			<li><a href="http://www.liuhengnet.com/info/huodong/" target="_blank">活 动</a></li>
+			<li><a href="http://www.liuhengnet.com/info/jiaoyou/" target="_blank">交 友</a></li>
+
+			<li class="s"><a href="http://www.liuhengnet.com/info/zhaoshang/" target="_blank">招 商</a></li>
+			<li><a href="http://www.liuhengnet.com/info/zhaopin/" target="_blank">招 聘</a></li>
+			<li><a href="http://www.liuhengnet.com/info/qiuzhi/" target="_blank">求 职</a></li>
+			<li><a href="http://www.liuhengnet.com/info/jiudian/" target="_blank">酒 店</a></li>
+			<li><a href="http://www.liuhengnet.com/article/chuanbo/" target="_blank">船 舶</a></li>
+			<li><a href="http://www.liuhengnet.com/info/" target="_blank">生 活</a></li>
+
+			<li><a href="http://www.liuhengnet.com/xuyuan/" target="_blank">许 愿</a></li>
+			<li><a href="http://www.liuhengnet.com/huanye/" target="_blank">黄 页</a></li>
+			<li class="s1"><a href="http://www.liuhengnet.com/ditu.html" target="_blank">六横地图</a></li>
+			<li><a href="http://www.liuhengnet.com/page/ls.html" target="_blank">历 史</a></li>
+			<li><a href="http://www.liuhengnet.com/info/peixun/" target="_blank">培 训</a></li>
+			<li class="s"><a href="http://www.liuhengnet.com/house/" target="_blank">房 产</a></li>			  
+  </ul>
+</div>
+</div>

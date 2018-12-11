@@ -1,0 +1,10 @@
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">
+<!--{loop $links $i $link}-->
+<!--{if $i%$cols==0}--><tr><!--{/if}-->
+<td height="20" >
+<!--{if $linktype}--> <a href="{$link[url]}" onclick="ajaxlink('{$link[linkid]}')" target="_blank"><img src="{$link[logo]}" width="88" height="31" border="0" alt="ÍøÕ¾Ãû³Æ£º{$link[name]} &#10;¼ò½é£º{$link[introduce]} 
+{if $showhits}&#10;µã»÷£º{$link[hits]}´Î {/if}"></a> <!--{else}--> <a href="{$link[url]}" onclick="ajaxlink('{$link[linkid]}')" target="_blank" title="¼ò½é£º{$link[introduce]} {if $showhits}&#10;µã»÷£º{$link[hits]}´Î {/if}"><span style="{$link['style']}">{$link[name]}</span> </a> <!--{/if}-->
+</td>
+<!--{if $i%$cols==($cols-1)}--></tr><!--{/if}-->
+<!--{/loop}-->
+</table>

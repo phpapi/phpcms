@@ -1,0 +1,18 @@
+(function(){
+	var i={"id":"dygg_101","s":"http://tablet.doyo.cn/jump/gg?"};
+	var d=[{"id":1001,"m":["http:\/\/s.doyo.cn\/upload\/20181030\/ce75025128d0e590a849.jpg","http:\/\/s.doyo.cn\/upload\/20181106\/4f8ef79cd12f953ccbaf.jpg","http:\/\/s.doyo.cn\/upload\/20181023\/fb2f61229fb0e1116af6.jpg","http:\/\/s.doyo.cn\/upload\/20180912\/9f389acafbc9dd21665c.png","http:\/\/s2.doyo.cn\/upload\/20181127\/5085f176b18bfb85a4a8.png","http:\/\/s1.doyo.cn\/upload\/20180518\/76f1262cc84cc5c194e1.jpg","http:\/\/s1.doyo.cn\/upload\/20180518\/d15709e6607e9355fd27.jpg","http:\/\/s.doyo.cn\/upload\/20170924\/0d7c5a93c52efcbd3583.jpg","http:\/\/s.doyo.cn\/upload\/20170111\/2e0d0446b693eeefe0dc.jpg","http:\/\/s2.doyo.cn\/upload\/20170430\/19807519c81af02904e5.jpg","http:\/\/s.doyo.cn\/upload\/20170504\/b226299135abda9de6ef.jpg","http:\/\/s.doyo.cn\/upload\/20180926\/f086017ecc3941e0b480.jpg"],"t":["\u9ed1\u57df\u6218\u754c","\u5c60\u9f99\u6218\u795e3D","\u4f20\u5947\u2162","\u706d\u795e","\u731b\u5c06\u5929\u4e0b","\u67aa\u6218\u82f1\u96c4","\u54aa\u547c\u4fa0","\u6563\u4eba\u4f20\u8bf4","\u6700\u4f73\u9635\u5bb9","\u8d5b\u5c14\u53f7","\u4e03\u6740","\u53d8\u6001\u9053\u58eb\u72d7"],"u":["http:\/\/g.29sls.com\/s\/1\/812\/91447.html?uid=ct1","http:\/\/g.29sls.com\/s\/1\/812\/91653.html?uid=ct4","http:\/\/g.29sls.com\/s\/1\/812\/91067.html?uid=ct3","http:\/\/g.2jsu2.com\/s\/1\/812\/89752.html?uid=ct5","http:\/\/g.29sls.com\/s\/1\/812\/92418.html?uid=ct2","http:\/\/www.doyo.cn\/game\/19131","http:\/\/www.doyo.cn\/game\/15046","http:\/\/www.doyo.cn\/game\/20791","http:\/\/www.doyo.cn\/game\/20269","http:\/\/www.doyo.cn\/game\/1566","http:\/\/www.doyo.cn\/game\/17595","http:\/\/g.2jsu2.com\/s\/1\/812\/89752.html?uid=ct5"],"w":1}];
+	var g={
+		"s":function(t){$("<iframe src=\""+i.s+i.id+"-"+t+"\" style=\"width:0;height:0;border:0;\"></iframe>").appendTo("body");},
+		"i":function(){
+			var $=self.jQuery;
+			
+			var p=$("script[src$='"+i.id+".js']");if(p.length!=1||d.length==0){return false;};
+			var w=0;$.each(d,function(i,n){w+=n.w;});var r=Math.random()*w;w=0;$.each(d,function(i,n){w+=n.w;if(r<w){d=d[i];return false;};});
+			var o=$("<ins></ins>").insertAfter(p);
+			var h="";$.each(d.m,function(i,n){if(d.u[i].length>0&&(n.length>0||d.t[i].length>0)){h+='<a href="'+d.u[i]+'">'+(n.length>0?'<img src="'+n+'">':'')+d.t[i]+'</a>';};});
+			var a=$(h).appendTo(o).click(function(){g.s(d.id+"-"+$(this).index());});
+			
+		}
+	};
+	if(self.jQuery){jQuery(function($){g.i();});};
+}());
