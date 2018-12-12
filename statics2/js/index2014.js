@@ -9,28 +9,8 @@
     })(jQuery);
     
     /*** JavaScript Function ***/
-    
-    function login_bar_init(){
-        var goto=window.web_header_login_goto?web_header_login_goto:location.href;
-        $.get("/passport/login_bar?random="+Math.random(),function(data){
-            if(data.logined){
-                $("#header_area .login").html(data.greetings+"，<a href=\"http://www.doyo.cn/my/\" class=\"name\"><strong>"+data.username+"</strong> (LV"+data.level+")</a>|<a href=\"http://www.doyo.cn/my/\">个人中心</a>|<a href=\"http://www.doyo.cn/my/msg/"+(data.msg_unread>0?"unread":"inbox")+"/\">收件箱"+(data.newmsg>0?"<strong>("+data.newmsg+")</strong>":"")+"</a>|<a href=\"#\" class=\"logout\">退出</a>");
-                $("#header_area a.logout").one("click",function(){
-                    $.get("/passport/logout",function(){
-                        if($("#header_area .login").length){login_bar_init();};
-                    });
-                    return false;
-                });
-            }else{
-                $("#header_area .login").html(data.greetings+"，欢迎来到逗游网！<a target=\"_self\" href=\"http://www.doyo.cn/passport/login?next="+goto+"\">登录</a>|<a target=\"_self\" href=\"http://www.doyo.cn/passport/register_1\">注册</a>");
-            }
-        },"json");
-    };
-    
-    function nav_bar_init(){
-        $("<span></span>").insertAfter("#header_area .nav a:not(:last)");
-        $("#header_area .nav a.index").addClass("active").next("span").remove().end().prev("span").remove();
-    };
+ 
+ 
     
     function game_bar_init(){
         $("#game_bar .nav .l .w").append("<div class=\"a\"></div>");
@@ -237,13 +217,7 @@
         };
     };
     
-    function click_click_init(){
-        var o1=$("#game_bar .content .b:first .l:first");
-        if(o1.length==1){
-            $("a",o1).click(function(){
-                $("<iframe src=\"http://tablet.doyo.cn/jump/click?W_I_01_"+($("a",o1).index(this)+1)+"\" style=\"width:0;height:0;border:0;\"></iframe>").appendTo("body");
-            });
-        };
+  
         var o2=$("#focus_pic");
         if(o2.length==1){
             o2.on("click","a",function(){
@@ -255,7 +229,7 @@
                 });
             });
         };
-    };
+ 
     
     var console=console||{log:function(){}};
     
@@ -272,11 +246,11 @@
     
     function page_init(){
     
-    login_bar_init();
+ 
     
-    $.ajax({url:"/Tpl/web/Public/js/2014_top_search.js",cache:true,dataType:"script"});
+    // $.ajax({url:"/Tpl/web/Public/js/2014_top_search.js",cache:true,dataType:"script"});
     
-    nav_bar_init();
+ 
     
     focus_pic_init(focus_pic);
     
@@ -322,7 +296,7 @@
     
     gg_click_init();
     
-    click_click_init();
+ 
     
     //console_info_show();
     
@@ -335,3 +309,5 @@
     page_init();
     
     });
+
+  

@@ -175,7 +175,15 @@ class category extends admin {
 				if($r) extract($r,EXTR_SKIP);
 				$setting = string2array($setting);
 			}
-			
+            $style = [1=>'涨姿势',
+                2=>'争议投票',
+                3=>'游戏评测',
+                4=>'热门回顾',
+                5=>'原创内容',
+                6=>'近期新作',
+                7=>'汉化发布',
+                8=>'即将发布',
+            ];
 			pc_base::load_sys_class('form','',0);
 			$type = $_GET['s'];
 			if($type==0) {
@@ -286,8 +294,9 @@ class category extends admin {
 				$template_list[$v['dirname']] = $v['name'] ? $v['name'] : $v['dirname'];
 				unset($template_list[$k]);
 			}
-			
-			
+
+
+
 			$show_validator = $catid = $r = '';
 			$catid = intval($_GET['catid']);
 			pc_base::load_sys_class('form','',0);
@@ -300,6 +309,15 @@ class category extends admin {
 			
 			$type = $_GET['type'];
 			if($type==0) {
+                $style = [1=>'涨姿势',
+                    2=>'争议投票',
+                    3=>'游戏评测',
+                    4=>'热门回顾',
+                    5=>'原创内容',
+                    6=>'近期新作',
+                    7=>'汉化发布',
+                    8=>'即将发布',
+                ];
 				include $this->admin_tpl('category_edit');
 			} elseif ($type==1) {
 				include $this->admin_tpl('category_page_edit');

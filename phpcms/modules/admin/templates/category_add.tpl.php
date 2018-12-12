@@ -53,6 +53,20 @@ include $this->admin_tpl('header');?>
 		<?php echo form::select_category('category_content_'.$this->siteid,$parentid,'name="info[parentid]" id="parentid"',L('please_select_parent_category'),0,-1);?>
 		</td>
       </tr>
+
+    <tr>
+        <th width="200"><?php echo L('col_style')?>：</th>
+        <td>
+            <select name="info[style]">
+                <?php
+                foreach($style as $k=>$v) {
+                    ?>
+                    <option value="<?php echo $k?>"><?php echo $v?></option>
+                    <?php
+                }
+                ?></select>
+        </td>
+    </tr>
      
       <tr>
         <th><?php echo L('catname')?>：</th>

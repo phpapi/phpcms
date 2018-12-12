@@ -52,6 +52,21 @@ include $this->admin_tpl('header');?>
 		<?php echo form::select_category('category_content_'.$this->siteid,$parentid,'name="info[parentid]" id="parentid"',L('please_select_parent_category'),0,-1);?> 
 		</td>
       </tr>
+
+    <tr>
+        <th width="200"><?php echo L('col_style')?>：</th>
+        <td>
+            <select name="info[style]">
+                <?php
+                foreach($style as $k=>$v) {
+                    ?>
+                    <option value="<?php echo $k?>" <?php if($data['style']==$k) echo 'selected';?>><?php echo $v?></option>
+                    <?php
+                }
+                ?></select>
+        </td>
+    </tr>
+
       <tr>
         <th><?php echo L('catname')?>：</th>
         <td><input type="text" name="info[catname]" id="catname" class="input-text" value="<?php echo $catname;?>"></td>

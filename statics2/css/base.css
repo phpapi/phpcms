@@ -1,0 +1,123 @@
+html, body, iframe, div, span, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, p, a, strong, img, form, fieldset, legend, label {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+}
+body {
+    line-height:1;
+}
+ul, ol {
+    list-style:none;
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+select, input, button {
+    vertical-align:middle;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* html {
+    zoom:expression(function(ele) {
+        ele.style.zoom="1";
+        document.execCommand("BackgroundImageCache", false, true);
+    }
+    (this));
+} */
+*html, *html body {
+    background-image:url(about:blank);
+    background-attachment:fixed;
+}
+/* Blank */
+ .bk1, .bk2, .bk3, .bk4, .bk5, .bk6, .bk7, .bk8, .bk9, .bk10, .bk11, .bk12, .bk13, .bk14, .bk15, .bk16, .bk17, .bk18, .bk19, .bk20 {
+    clear:both;
+    font:1px/1px Arial;
+    overflow:hidden;
+}
+ 
+  
+ 
+  
+#game_bar .nav .l_a .w1 {
+    background:url('../img/index_game_bar_bg.png') -200px 0 no-repeat;
+    background: rgba(0, 145, 255,0.5);
+}
+#game_bar .nav .l_a .w2 {
+    background:url(../img/index_game_bar_bg.png) -200px -29px no-repeat;
+    background: rgba(0, 145, 255,0.5);
+}
+#game_bar .nav .l_a .w3 {
+    background:url(../img/index_game_bar_bg.png) -200px -58px no-repeat;
+    background: rgba(0, 145, 255,0.5);
+}
+#game_bar .nav .l_a .w4 {
+    background:url(../img/index_game_bar_bg.png) -200px -87px no-repeat;
+    background: rgba(0, 145, 255,0.5);
+}
+#game_bar .nav .l_a .w5 {
+    background:url(../img/index_game_bar_bg.png) -200px -116px no-repeat;
+    background: rgba(0, 145, 255,0.5);
+}
+#game_bar .nav .l_a .w6 {
+    background:url(../img/index_game_bar_bg.png) -200px -145px no-repeat;
+    background: rgba(0, 145, 255,0.5);
+}
+#game_bar .nav .l_a .w .a {
+    position:absolute;
+    z-index:1;
+    width:10px;
+    height:15px;
+    top:10px;
+    left:135px;
+    background:url('../img/index_arrow_bg.png') 0 0 no-repeat;
+    font:1px/1 Arial;
+}
+#game_bar .content {
+    float:left;
+    width:999px;
+    height:165px;
+    padding:5px 9px 0 4px;
+    border:solid #ECECEC;
+    border-width:1px 1px 1px 0;
+    overflow:hidden;
+}
+#game_bar .content .b {
+    width:1009px;
+    height:173px;
+}
+#game_bar .content .b .l {
+    width:1090px;
+    height:18px;
+    margin:0 0 11px 0;
+    font:12px/1.5 Arial;
+    color:#AAA;
+    overflow:hidden;
+}
+#game_bar .content .b .l a {
+    display:inline-block;
+    margin:0 12px;
+    color:#666;
+    font-size: 12px;
+    font-family: "微软雅黑",'Microsoft YaHei','Arial','Heiti SC'
+}
+#game_bar .content .b .l a:hover {
+    color:#F60;
+}
+#game_bar .content .b .l a.o {
+    color:#F60;
+}
+#game_bar .content .b .l a.o:hover {
+    color:#F00;
+}
+#game_bar .content .b .l span {
+    color:#999;
+}
+ 

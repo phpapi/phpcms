@@ -7,6 +7,7 @@ translation save at the array:$LANG
 $LANG['left'] = '左边';
 $LANG['right'] = '右边';
 $LANG['isside'] = '左右位置';
+$LANG['col_style'] = '栏目格式';
 $LANG['no_language'] = '缺少语言包';
 $LANG['website_manage'] = 'phpcms V9 - 后台管理中心';
 $LANG['lockscreen'] = '锁屏';
